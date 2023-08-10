@@ -18,13 +18,13 @@ class BannerData: Codable {
     
     var id: Int = 0
     var text = "SAMIR"
-    var bannerBackgroundColor: String = "000000"
+    var bannerBackgroundColor: String = "ffffff"
     var bannerBackgroundBrightness = 0.5
     
     var bannerTextFont = Fonts.SFProRoundedRegular
     var bannerTextFontSize: Int = 100
     
-    var bannerTextColor: String = "ffffff"
+    var bannerTextColor: String = "000000"
     var bannerTextBrightness = 0.5
     
     var glwoing = false

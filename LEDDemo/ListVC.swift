@@ -106,6 +106,8 @@ class ListVC: UIViewController {
         
         //..Banner Background Color
         
+        
+        
         //.. Banner Text Fonts
         lblFontName.text = Fonts.SFProRoundedRegular
         bannerData?.bannerTextFont = Fonts.SFProRoundedRegular
@@ -607,14 +609,19 @@ extension ListVC: SavedBannersVCDelegate {
             btnLeftToRight.backgroundColor = .white
         }
         
-        //..Banner Background Color
+        if bannerData.bannerBackgroundColor != "ffffff" {
+            bannerColorView.setSliderValueBy(colour: UIColor.hexStringToUIColor(hex: bannerData.bannerBackgroundColor))
+        }
+        
+        if bannerData.bannerTextColor != "000000" {
+            bannerTextColorView.setSliderValueBy(colour: UIColor.hexStringToUIColor(hex: bannerData.bannerTextColor))
+        }
         
         //.. Banner Text Fonts
         lblFontName.text = bannerData.bannerTextFont
         txtBannerTextSize.text = "\(bannerData.bannerTextFontSize)"
         
         //.. Banner Text Color
-        
         bannerColorView.colourChosen = UIColor.hexStringToUIColor(hex: bannerData.bannerBackgroundColor)
         bannerTextColorView.colourChosen = UIColor.hexStringToUIColor(hex: bannerData.bannerTextColor)
         
